@@ -1,4 +1,4 @@
-[![CI](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml/badge.svg)](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml)
+this is my redme file [![CI](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml/badge.svg)](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml)
 
 # FinWise Lending — Credit Risk Project
 ## Checkpoint 2 (Week 3): Data Pipeline + Baseline Model
@@ -179,3 +179,9 @@ python scripts/bias_audit.py                 # regenerates reports/bias_audit.js
 **Bias audit (age, 200-row held-out test split):** approval-side rate 68-76%, lowest impact ratio **0.90** (passes the 0.80
 four-fifths rule). Each group has only 40-60 applicants, so treat this as indicative. **Gender cannot be audited**: it is not in
 `finwise_loan_applications.csv` and no other file joins to it. Add it to the application data (kept out of the model) and re-run the script.
+
+---
+
+## Demo
+
+A walkthrough demo is available here: [Demo video](https://drive.google.com/file/d/1abJWtPxT3-3zkL7aLRfkXpR0BlictvwP/view?usp=drive_link)
