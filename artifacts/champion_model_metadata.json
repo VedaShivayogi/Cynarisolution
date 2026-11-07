@@ -1,0 +1,48 @@
+{
+  "selected_config": "config_B_balanced_default",
+  "selection_criterion": "highest validation Gini (test set untouched during selection)",
+  "mlflow_run_id": "70f079637d3a42c692fd99f3a940c712",
+  "mlflow_experiment": "finwise_champion_model",
+  "hyperparameters": {
+    "n_estimators": 500,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "gamma": 0.1,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "scale_pos_weight": 3.216867469879518,
+    "random_state": 42,
+    "eval_metric": "auc"
+  },
+  "best_iteration": 15,
+  "metrics": {
+    "train": {
+      "auc": 0.9715603988989666,
+      "gini": 0.9431207977979332,
+      "ks_statistic": 0.8232480483732683,
+      "brier_score": 0.11779476004817732,
+      "n": 700
+    },
+    "val": {
+      "auc": 0.9375,
+      "gini": 0.875,
+      "ks_statistic": 0.7719298245614035,
+      "brier_score": 0.129598620523734,
+      "n": 100
+    },
+    "test": {
+      "auc": 0.9084429824561404,
+      "gini": 0.8168859649122808,
+      "ks_statistic": 0.6820175438596492,
+      "brier_score": 0.13761352678513022,
+      "n": 200
+    }
+  },
+  "baseline_test_gini": 0.849232456140351,
+  "gini_lift_over_baseline": -0.03234649122807021,
+  "target_gini": 0.45,
+  "target_met": true
+}

@@ -1,0 +1,78 @@
+{
+  "dummy_val": {
+    "label": "Dummy (majority class)",
+    "auc": 0.4583333333333333,
+    "gini": -0.08333333333333337,
+    "ks_statistic": 0.20833333333333331,
+    "brier_score": 0.39,
+    "confusion_matrix": [
+      [
+        57,
+        19
+      ],
+      [
+        20,
+        4
+      ]
+    ],
+    "n": 100,
+    "default_rate": 0.24
+  },
+  "baseline_train": {
+    "label": "Logistic Regression - Train",
+    "auc": 0.930937232074365,
+    "gini": 0.8618744641487299,
+    "ks_statistic": 0.7113848653039123,
+    "brier_score": 0.10791531187760116,
+    "confusion_matrix": [
+      [
+        450,
+        84
+      ],
+      [
+        27,
+        139
+      ]
+    ],
+    "n": 700,
+    "default_rate": 0.23714285714285716
+  },
+  "baseline_val": {
+    "label": "Logistic Regression - Validation",
+    "auc": 0.9194078947368421,
+    "gini": 0.8388157894736843,
+    "ks_statistic": 0.7368421052631579,
+    "brier_score": 0.11580723153044672,
+    "confusion_matrix": [
+      [
+        63,
+        13
+      ],
+      [
+        4,
+        20
+      ]
+    ],
+    "n": 100,
+    "default_rate": 0.24
+  },
+  "baseline_test": {
+    "label": "Logistic Regression - Test",
+    "auc": 0.9246162280701755,
+    "gini": 0.849232456140351,
+    "ks_statistic": 0.6995614035087719,
+    "brier_score": 0.10742667382744277,
+    "confusion_matrix": [
+      [
+        131,
+        21
+      ],
+      [
+        10,
+        38
+      ]
+    ],
+    "n": 200,
+    "default_rate": 0.24
+  }
+}

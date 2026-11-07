@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend tests + quality gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"          # same as training (see mlruns/*/python_env.yaml)
+          cache: pip
+          cache-dependency-path: requirements-*.txt
+      - name: Install (pinned to training versions)
+        run: python -m pip install -r requirements-dev.txt
+      - name: Integration tests (36 tests, includes real multi-process server + 50 concurrent requests)
+        run: python -m pytest -v
+      - name: Fairness gate (age impact ratio must stay >= 0.80)
+        run: |
+          python scripts/bias_audit.py
+          python - <<'PY'
+          import json
+          a = json.load(open("reports/bias_audit.json"))
+          worst = min(g["impact_ratio"] for g in a["groups"])
+          print(f"lowest age impact ratio = {worst:.3f}")
+          assert worst >= 0.80, "bias audit failed the four-fifths rule"
+          PY
+
+  frontend:
+    name: Frontend build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run build

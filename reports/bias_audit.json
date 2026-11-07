@@ -1,0 +1,52 @@
+{
+  "attribute": "age_band",
+  "data": "held-out test split (n=200)",
+  "threshold": 0.5,
+  "groups": [
+    {
+      "group": "<=30",
+      "n": 50,
+      "base_default_rate": 0.26,
+      "pct_flagged_high_risk": 0.24,
+      "pct_approved": 0.76,
+      "tpr": 0.6923076923076923,
+      "auc": 0.923076923076923,
+      "impact_ratio": 1.0
+    },
+    {
+      "group": "31-40",
+      "n": 60,
+      "base_default_rate": 0.26666666666666666,
+      "pct_flagged_high_risk": 0.31666666666666665,
+      "pct_approved": 0.6833333333333333,
+      "tpr": 0.75,
+      "auc": 0.8778409090909091,
+      "impact_ratio": 0.8991228070175439
+    },
+    {
+      "group": "41-50",
+      "n": 50,
+      "base_default_rate": 0.2,
+      "pct_flagged_high_risk": 0.3,
+      "pct_approved": 0.7,
+      "tpr": 0.9,
+      "auc": 0.9475,
+      "impact_ratio": 0.9210526315789473
+    },
+    {
+      "group": "51+",
+      "n": 40,
+      "base_default_rate": 0.225,
+      "pct_flagged_high_risk": 0.25,
+      "pct_approved": 0.75,
+      "tpr": 0.7777777777777778,
+      "auc": 0.9713261648745519,
+      "impact_ratio": 0.9868421052631579
+    }
+  ],
+  "gender": {
+    "audited": false,
+    "reason": "no gender field in loan_applications.csv; files share no join key"
+  },
+  "caveat": "Groups of ~30-60 applicants: impact ratios are noisy. Re-run on more data before drawing conclusions."
+}

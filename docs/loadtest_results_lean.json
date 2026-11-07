@@ -1,0 +1,388 @@
+{
+  "client": "lean",
+  "env": {
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "logical_cpus": 1,
+    "python": "3.12.3",
+    "os": "Linux-6.18.44-fc-v236-x86_64-with-glibc2.39",
+    "xgboost": "3.4.1",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.6",
+    "fastapi": "0.162.0",
+    "uvicorn": "0.54.0"
+  },
+  "settings": {
+    "burst_rounds": 20,
+    "sustained_seconds": 20,
+    "ramp_seconds": 8
+  },
+  "runs": {
+    "pipeline_1w": {
+      "burst_50": {
+        "requests": 1000,
+        "ok": 1000,
+        "errors": 0,
+        "wall_s": 23.2,
+        "throughput_rps": 43.1,
+        "client_ms": {
+          "mean": 1139.0,
+          "p50": 1124.5,
+          "p95": 1323.1,
+          "p99": 1435.9,
+          "max": 1443.7
+        },
+        "server_ms": {
+          "p50": 1102.3,
+          "p95": 1311.3,
+          "p99": 1423.5
+        },
+        "size": 50,
+        "rounds": 20,
+        "error_codes": {}
+      },
+      "sustained_50": {
+        "requests": 955,
+        "ok": 955,
+        "errors": 0,
+        "wall_s": 20.8,
+        "throughput_rps": 45.9,
+        "client_ms": {
+          "mean": 1078.7,
+          "p50": 1068.1,
+          "p95": 1292.1,
+          "p99": 1384.9,
+          "max": 1504.4
+        },
+        "server_ms": {
+          "p50": 937.4,
+          "p95": 1225.3,
+          "p99": 1275.4
+        },
+        "users": 50,
+        "error_codes": {},
+        "cpu": {
+          "client_pct_of_one_core": 1,
+          "server_pct_of_one_core": 104,
+          "server_cpu_ms_per_request": 22.67,
+          "client_cpu_ms_per_request": 0.24
+        }
+      },
+      "ramp": {
+        "1": {
+          "requests": 414,
+          "ok": 414,
+          "errors": 0,
+          "wall_s": 8.02,
+          "throughput_rps": 51.6,
+          "client_ms": {
+            "mean": 19.3,
+            "p50": 17.6,
+            "p95": 27.2,
+            "p99": 29.2,
+            "max": 111.5
+          },
+          "server_ms": {
+            "p50": 16.7,
+            "p95": 25.8,
+            "p99": 28.1
+          },
+          "users": 1,
+          "error_codes": {}
+        },
+        "10": {
+          "requests": 400,
+          "ok": 400,
+          "errors": 0,
+          "wall_s": 8.14,
+          "throughput_rps": 49.1,
+          "client_ms": {
+            "mean": 202.7,
+            "p50": 197.4,
+            "p95": 287.1,
+            "p99": 338.0,
+            "max": 389.6
+          },
+          "server_ms": {
+            "p50": 180.4,
+            "p95": 270.3,
+            "p99": 312.2
+          },
+          "users": 10,
+          "error_codes": {}
+        },
+        "25": {
+          "requests": 399,
+          "ok": 399,
+          "errors": 0,
+          "wall_s": 8.22,
+          "throughput_rps": 48.6,
+          "client_ms": {
+            "mean": 514.0,
+            "p50": 511.0,
+            "p95": 644.7,
+            "p99": 675.4,
+            "max": 695.8
+          },
+          "server_ms": {
+            "p50": 458.0,
+            "p95": 579.5,
+            "p99": 607.8
+          },
+          "users": 25,
+          "error_codes": {}
+        },
+        "50": {
+          "requests": 405,
+          "ok": 405,
+          "errors": 0,
+          "wall_s": 8.94,
+          "throughput_rps": 45.3,
+          "client_ms": {
+            "mean": 1082.6,
+            "p50": 1070.9,
+            "p95": 1301.7,
+            "p99": 1372.4,
+            "max": 1384.4
+          },
+          "server_ms": {
+            "p50": 1001.3,
+            "p95": 1199.6,
+            "p99": 1242.9
+          },
+          "users": 50,
+          "error_codes": {}
+        },
+        "100": {
+          "requests": 416,
+          "ok": 416,
+          "errors": 0,
+          "wall_s": 9.28,
+          "throughput_rps": 44.8,
+          "client_ms": {
+            "mean": 2170.2,
+            "p50": 2321.8,
+            "p95": 2607.4,
+            "p99": 2659.2,
+            "max": 2706.8
+          },
+          "server_ms": {
+            "p50": 2124.2,
+            "p95": 2447.0,
+            "p99": 2530.5
+          },
+          "users": 100,
+          "error_codes": {}
+        }
+      }
+    },
+    "fast_1w": {
+      "burst_50": {
+        "requests": 1000,
+        "ok": 1000,
+        "errors": 0,
+        "wall_s": 2.33,
+        "throughput_rps": 428.3,
+        "client_ms": {
+          "mean": 108.6,
+          "p50": 100.4,
+          "p95": 184.7,
+          "p99": 199.6,
+          "max": 200.9
+        },
+        "server_ms": {
+          "p50": 84.2,
+          "p95": 172.0,
+          "p99": 185.6
+        },
+        "size": 50,
+        "rounds": 20,
+        "error_codes": {}
+      },
+      "sustained_50": {
+        "requests": 7331,
+        "ok": 7331,
+        "errors": 0,
+        "wall_s": 20.03,
+        "throughput_rps": 366.0,
+        "client_ms": {
+          "mean": 136.5,
+          "p50": 125.7,
+          "p95": 227.6,
+          "p99": 252.8,
+          "max": 333.4
+        },
+        "server_ms": {
+          "p50": 100.1,
+          "p95": 199.5,
+          "p99": 226.3
+        },
+        "users": 50,
+        "error_codes": {},
+        "cpu": {
+          "client_pct_of_one_core": 5,
+          "server_pct_of_one_core": 94,
+          "server_cpu_ms_per_request": 2.57,
+          "client_cpu_ms_per_request": 0.14
+        }
+      },
+      "ramp": {
+        "1": {
+          "requests": 2911,
+          "ok": 2911,
+          "errors": 0,
+          "wall_s": 8.0,
+          "throughput_rps": 363.8,
+          "client_ms": {
+            "mean": 2.7,
+            "p50": 2.5,
+            "p95": 4.0,
+            "p99": 4.6,
+            "max": 84.9
+          },
+          "server_ms": {
+            "p50": 1.8,
+            "p95": 2.9,
+            "p99": 3.3
+          },
+          "users": 1,
+          "error_codes": {}
+        },
+        "10": {
+          "requests": 3160,
+          "ok": 3160,
+          "errors": 0,
+          "wall_s": 8.01,
+          "throughput_rps": 394.4,
+          "client_ms": {
+            "mean": 25.3,
+            "p50": 23.3,
+            "p95": 34.4,
+            "p99": 44.7,
+            "max": 135.7
+          },
+          "server_ms": {
+            "p50": 19.0,
+            "p95": 29.0,
+            "p99": 38.2
+          },
+          "users": 10,
+          "error_codes": {}
+        },
+        "25": {
+          "requests": 3010,
+          "ok": 3010,
+          "errors": 0,
+          "wall_s": 8.05,
+          "throughput_rps": 374.0,
+          "client_ms": {
+            "mean": 66.8,
+            "p50": 59.2,
+            "p95": 122.6,
+            "p99": 176.1,
+            "max": 240.1
+          },
+          "server_ms": {
+            "p50": 48.3,
+            "p95": 92.5,
+            "p99": 162.4
+          },
+          "users": 25,
+          "error_codes": {}
+        },
+        "50": {
+          "requests": 3061,
+          "ok": 3061,
+          "errors": 0,
+          "wall_s": 8.08,
+          "throughput_rps": 378.9,
+          "client_ms": {
+            "mean": 131.8,
+            "p50": 117.7,
+            "p95": 215.9,
+            "p99": 253.6,
+            "max": 267.3
+          },
+          "server_ms": {
+            "p50": 95.7,
+            "p95": 184.4,
+            "p99": 228.2
+          },
+          "users": 50,
+          "error_codes": {}
+        },
+        "100": {
+          "requests": 2595,
+          "ok": 2595,
+          "errors": 0,
+          "wall_s": 8.15,
+          "throughput_rps": 318.3,
+          "client_ms": {
+            "mean": 312.2,
+            "p50": 297.8,
+            "p95": 446.2,
+            "p99": 463.6,
+            "max": 493.4
+          },
+          "server_ms": {
+            "p50": 237.8,
+            "p95": 376.2,
+            "p99": 404.2
+          },
+          "users": 100,
+          "error_codes": {}
+        }
+      }
+    },
+    "fast_2w": {
+      "burst_50": {
+        "requests": 1000,
+        "ok": 1000,
+        "errors": 0,
+        "wall_s": 3.8,
+        "throughput_rps": 263.0,
+        "client_ms": {
+          "mean": 137.9,
+          "p50": 145.2,
+          "p95": 249.3,
+          "p99": 293.6,
+          "max": 309.2
+        },
+        "server_ms": {
+          "p50": 99.4,
+          "p95": 213.5,
+          "p99": 244.8
+        },
+        "size": 50,
+        "rounds": 20,
+        "error_codes": {}
+      },
+      "sustained_50": {
+        "requests": 6865,
+        "ok": 6865,
+        "errors": 0,
+        "wall_s": 20.08,
+        "throughput_rps": 341.8,
+        "client_ms": {
+          "mean": 145.9,
+          "p50": 128.0,
+          "p95": 312.2,
+          "p99": 468.0,
+          "max": 560.0
+        },
+        "server_ms": {
+          "p50": 73.8,
+          "p95": 159.8,
+          "p99": 408.6
+        },
+        "users": 50,
+        "error_codes": {},
+        "cpu": {
+          "client_pct_of_one_core": 5,
+          "server_pct_of_one_core": 94,
+          "server_cpu_ms_per_request": 2.74,
+          "client_cpu_ms_per_request": 0.15
+        }
+      }
+    }
+  }
+}
