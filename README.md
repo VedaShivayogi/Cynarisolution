@@ -1,4 +1,4 @@
-this is my redme file [![CI](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml/badge.svg)](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml)
+[![CI](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml/badge.svg)](https://github.com/VedaShivayogi/Cynarisolution/actions/workflows/ci.yml)
 
 # FinWise Lending — Credit Risk Project
 ## Checkpoint 2 (Week 3): Data Pipeline + Baseline Model
