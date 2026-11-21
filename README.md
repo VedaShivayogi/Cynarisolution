@@ -6,7 +6,7 @@
 This folder contains everything needed to run the data ingestion pipeline,
 train the baseline model, and reproduce the baseline report.
 
----
+--
 
 ## 1. Files in this delivery
 
